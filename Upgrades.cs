@@ -5,13 +5,19 @@ using UnityEngine.UI;
 
 public class Upgrades : MonoBehaviour
 {
+    public int CurrentCash;
 
     public GameObject FakeBiggerButton;
     public GameObject FakeBiggerText;
     public GameObject RealBiggerButton;
     public GameObject RealBiggerText;
-    public int CurrentCash;
     public static int BiggerValue = 20;
+
+    public GameObject FakeFasterButton;
+    public GameObject FakeFasterText;
+    public GameObject RealFasterButton;
+    public GameObject RealFasterText;
+    public static int FasterValue = 50;
 
     void Update()
     {
@@ -29,5 +35,17 @@ public class Upgrades : MonoBehaviour
             RealBiggerButton.SetActive(false);
         }
 
+        FakeFasterText.GetComponent<Text>().text = "Buy FasterPoop - " + FasterValue + "$";
+        RealFasterText.GetComponent<Text>().text = "Buy FasterPoop - " + FasterValue + "$";
+        if (CurrentCash >= FasterValue)
+        {
+            FakeFasterButton.SetActive(false);
+            RealFasterButton.SetActive(true);
+        }
+        else
+        {
+            FakeFasterButton.SetActive(true);
+            RealFasterButton.SetActive(false);
+        }
     }
 }

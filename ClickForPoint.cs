@@ -17,6 +17,7 @@ public class ClickForPoint : MonoBehaviour
     void Start()
     {
         Poop.GetComponent<Transform>().localScale = new Vector3(0.2f, 0.2f, 0f);
+        Poop.GetComponent<Rigidbody2D>().gravityScale = 1;
     }
 
     void Update()
