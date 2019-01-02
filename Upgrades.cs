@@ -19,6 +19,12 @@ public class Upgrades : MonoBehaviour
     public GameObject RealFasterText;
     public static int FasterValue = 50;
 
+    public GameObject FakeAutoButton;
+    public GameObject FakeAutoText;
+    public GameObject RealAutoButton;
+    public GameObject RealAutoText;
+    public static int AutoValue = 150;
+
     void Update()
     {
         CurrentCash = ClickForPoint.CashCount;
@@ -35,8 +41,8 @@ public class Upgrades : MonoBehaviour
             RealBiggerButton.SetActive(false);
         }
 
-        FakeFasterText.GetComponent<Text>().text = "Buy FasterPoop - " + FasterValue + "$";
-        RealFasterText.GetComponent<Text>().text = "Buy FasterPoop - " + FasterValue + "$";
+        FakeFasterText.GetComponent<Text>().text = "Buy FasterFalling - " + FasterValue + "$";
+        RealFasterText.GetComponent<Text>().text = "Buy FasterFalling - " + FasterValue + "$";
         if (CurrentCash >= FasterValue)
         {
             FakeFasterButton.SetActive(false);
@@ -46,6 +52,19 @@ public class Upgrades : MonoBehaviour
         {
             FakeFasterButton.SetActive(true);
             RealFasterButton.SetActive(false);
+        }
+
+        FakeAutoText.GetComponent<Text>().text = "Buy AutoPoop - " + AutoValue + "$";
+        RealAutoText.GetComponent<Text>().text = "Buy AutoPoop - " + AutoValue + "$";
+        if (CurrentCash >= AutoValue)
+        {
+            FakeAutoButton.SetActive(false);
+            RealAutoButton.SetActive(true);
+        }
+        else
+        {
+            FakeAutoButton.SetActive(true);
+            RealAutoButton.SetActive(false);
         }
     }
 }

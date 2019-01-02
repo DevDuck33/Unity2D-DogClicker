@@ -6,7 +6,10 @@ public class PurchesLogs : MonoBehaviour
 {
     public static float BiggerCost;
     public static float FasterCost;
+    public static float AutoCost;
     public GameObject Poop;
+    public static int AutoPoopIncrease = 0;
+    public GameObject AutoPoopObject;
 
     public void BiggerPoop()
     {
@@ -22,7 +25,15 @@ public class PurchesLogs : MonoBehaviour
         ClickForPoint.CashCount -= Upgrades.FasterValue;
         FasterCost = (float)Upgrades.FasterValue * 1.8f;
         Upgrades.FasterValue = (int)Mathf.Round(FasterCost);
-        Poop.GetComponent<Rigidbody2D>().gravityScale += 0.2f;
-        
+        Poop.GetComponent<Rigidbody2D>().gravityScale += 0.2f;   
+    }
+
+    public void AutoPoop()
+    {
+        ClickForPoint.CashCount -= Upgrades.AutoValue;
+        AutoPoopObject.SetActive(true);
+        AutoPoopIncrease += 1;
+        AutoCost = (float)Upgrades.AutoValue * 1.8f;
+        Upgrades.AutoValue = (int)Mathf.Round(AutoCost);
     }
 }
