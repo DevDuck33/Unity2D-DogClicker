@@ -5,7 +5,6 @@ using UnityEngine;
 public class AutoPooping : MonoBehaviour
 {
     public bool CreatingThePoop = false;
-    public static float Timer = 2f;
 
     void Update()
     {
@@ -19,7 +18,8 @@ public class AutoPooping : MonoBehaviour
     IEnumerator CreateThePoop()
     {
         ClickForPoint.CashCount += (ClickForPoint.PoopValue) * (PurchesLogs.AutoPoopIncrease);
-        yield return new WaitForSeconds(Timer);
+        yield return new WaitForSeconds(PurchesLogs.Timer);
         CreatingThePoop = false;
     }
+
 }

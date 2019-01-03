@@ -14,11 +14,13 @@ public class ClickForPoint : MonoBehaviour
     public static bool CanPoop = true;
     public GameObject SpawnPoint;
 
+    /*
     void Start()
     {
         Poop.GetComponent<Transform>().localScale = new Vector3(0.2f, 0.2f, 0f);
         Poop.GetComponent<Rigidbody2D>().gravityScale = 1;
     }
+    */
 
     void Update()
     {
