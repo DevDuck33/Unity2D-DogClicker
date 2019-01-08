@@ -17,7 +17,7 @@ public class Upgrades : MonoBehaviour
     public GameObject FakeFasterText;
     public GameObject RealFasterButton;
     public GameObject RealFasterText;
-    public static int FasterValue = 30;
+    public static int FasterValue = 50;
 
     public GameObject FakeAutoButton;
     public GameObject FakeAutoText;
@@ -29,7 +29,7 @@ public class Upgrades : MonoBehaviour
     public GameObject FakeFasterAutoText;
     public GameObject RealFasterAutoButton;
     public GameObject RealFasterAutoText;
-    public static int FasterAutoValue = 150;
+    public static int FasterAutoValue = 120;
 
     void Update()
     {

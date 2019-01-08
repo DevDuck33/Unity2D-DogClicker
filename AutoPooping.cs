@@ -8,6 +8,7 @@ public class AutoPooping : MonoBehaviour
 
     void Update()
     {
+       
         if (CreatingThePoop == false)
         {
             CreatingThePoop = true;

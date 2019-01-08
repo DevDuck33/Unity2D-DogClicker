@@ -11,7 +11,6 @@ public class PurchesLogs : MonoBehaviour
     public static float Timer = 3f;
     public GameObject Poop;
     public static int AutoPoopIncrease = 0;
-    public GameObject AutoPoopObject;
 
     public void BiggerPoop()
     {
@@ -33,7 +32,6 @@ public class PurchesLogs : MonoBehaviour
     public void AutoPoop()
     {
         ClickForPoint.CashCount -= Upgrades.AutoValue;
-        AutoPoopObject.SetActive(true);
         AutoPoopIncrease += 1;
         AutoCost = (float)Upgrades.AutoValue * 1.8f;
         Upgrades.AutoValue = (int)Mathf.Round(AutoCost);
